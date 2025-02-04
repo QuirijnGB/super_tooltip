@@ -552,16 +552,16 @@ class _SuperTooltipState extends State<SuperTooltip>
     var bottom = widget.bottom;
 
     if (widget.snapsFarAwayVertically) {
-      constraints = constraints.copyWith(maxHeight: null);
-      left = right = 0.0;
+      // constraints = constraints.copyWith(maxHeight: null);
+      // left = right = 0.0;
 
       if (overlay != null) {
         if (target.dy > overlay.size.center(Offset.zero).dy) {
           preferredDirection = TooltipDirection.up;
-          top = 0.0;
+          // top = 0.0;
         } else {
           preferredDirection = TooltipDirection.down;
-          bottom = 0.0;
+          // bottom = 0.0;
         }
       } else {
         // overlay is null - set default values
@@ -569,21 +569,21 @@ class _SuperTooltipState extends State<SuperTooltip>
         bottom = 0.0;
       }
     } else if (widget.snapsFarAwayHorizontally) {
-      constraints = constraints.copyWith(maxHeight: null);
-      top = bottom = 0.0;
+      // constraints = constraints.copyWith(maxHeight: null);
+      // top = bottom = 0.0;
 
       if (overlay != null) {
         if (target.dx < overlay.size.center(Offset.zero).dx) {
           preferredDirection = TooltipDirection.right;
-          right = 0.0;
+          // right = 0.0;
         } else {
           preferredDirection = TooltipDirection.left;
-          left = 0.0;
+          // left = 0.0;
         }
       } else {
         // overlay is null - set default values
         preferredDirection = TooltipDirection.left;
-        left = 0.0;
+        // left = 0.0;
       }
     }
 
